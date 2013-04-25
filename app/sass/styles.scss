@@ -1,0 +1,23 @@
+@import'popup.scss';
+
+body{
+  margin:0;
+}
+
+$headerHeight: 125px;
+.titlebar{
+  background: pink;
+  height: $headerHeight;
+}
+.sidebar{
+  background: orange;
+  width:20%;
+  position: absolute;
+  top: $headerHeight;
+  bottom: 0;
+}
+
+.content{
+  background: yellow;
+  margin: 0;
+}

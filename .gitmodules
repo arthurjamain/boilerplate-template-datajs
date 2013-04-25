@@ -1,0 +1,3 @@
+[submodule "app/js/lib/framework"]
+	path = app/js/lib/framework
+	url = https://github.com/joshfire/joshfire-framework.git

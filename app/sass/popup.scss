@@ -1,0 +1,49 @@
+@import'_mixins.scss';
+
+$loginWidth: 256px;
+$loginHeight: 265px;
+
+
+.login{
+  background: #444;
+  @include box-shadow(5px 5px 20px rgba(0,0,0,0.7));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $loginWidth;
+  height: $loginHeight;
+  margin-left: - $loginWidth/2;
+  margin-top: - $loginHeight/2;
+}
+.login.frame{
+  /*background: gray;
+  padding: 10px;*/
+}
+
+.popupTitle{
+  height: 26px;
+  line-height: 26px;
+  padding-left: 14px;
+  background: black;
+  color: #CCCCCC;
+  font: "PT sans-serif" bold 14pt;
+}
+
+$textColorPopup: #CCCCCC;
+.popupContent{
+  padding: 14px;
+  color: $textColorPopup;
+  font: "PT sans-serif" 12pt;
+}
+
+.popupContent a{
+  color: $textColorPopup;
+  text-decoration: none;
+}
+
+#loginHelper{
+  float:left;
+}
+#loginSubmit{
+  float:left;
+}

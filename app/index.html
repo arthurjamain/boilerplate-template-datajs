@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" data-css href="css/styles.css" />
+  </head>
+  <body>
+    
+    <div id="main"></div>
+
+    <script data-joshfire-bootstrap></script>
+    <script type="text/javascript" src="js/woodmanConfig.js"></script>
+    <script type="text/javascript">
+      if ((/android/gi).test(navigator.appVersion)) {
+        document.write('<script data-adapter-android data-main="js/main" src="js/lib/framework/lib/adapters/android/bootstrap.js"></'+'script>');
+      } else {
+        document.write('<script data-adapter-ios data-main="js/main" src="js/lib/framework/lib/adapters/ios/bootstrap.js"></'+'script>');
+      }
+    </script>
+  </body>
+</html>

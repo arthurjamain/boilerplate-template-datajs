@@ -1,0 +1,25 @@
+{
+  "name": "joshfire-boilerplate",
+  "version": "0.0.1",
+  "description": "Boilerplate for Joshfire template or app",
+  "author": "Joshfire",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshfire/boilerplate-template-project"
+  },
+  "keywords": [],
+  "license": "",
+  "engines": {},
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "0.4.0rc4",
+    "grunt-contrib-jshint": "https://github.com/gruntjs/grunt-contrib-jshint/archive/7fd70e86c5a8d489095fa81589d95dccb8eb3a46.tar.gz",
+    "grunt-contrib-nodeunit": "0.1.0",
+    "grunt-contrib-sass": "0.2.1",
+    "grunt-contrib-watch": "0.1.4",
+    "requirejs": "2.1.4",
+    "jasmine-node": "1.0.28",
+    "grunt-cli": "0.1.6"
+  }
+}
