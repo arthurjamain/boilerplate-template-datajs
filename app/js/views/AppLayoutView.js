@@ -6,8 +6,7 @@ define([
 
   'views/TitlebarView',
   'views/SidebarView',
-  'views/ContentView',
-  'views/LoginView'
+  'views/ContentView'
 ], function(
   woodman,
   _,
@@ -16,8 +15,7 @@ define([
   
   TitlebarView,
   SidebarView,
-  ContentView,
-  LoginView
+  ContentView
 ) {
   var logger = woodman.getLogger('views.AppLayoutView');
 
@@ -40,17 +38,11 @@ define([
       var content = new ContentView({
         appController: options.appController
       });
-      var loginView = new LoginView({
-        appController: options.appController,
-        model: new Backbone.Model(),
-        template: '<div class="frame"></div>'
-      });
 
       options.children = {
         titlebar: titlebar,
         sidebar: sidebar,
-        content: content,
-        login: loginView
+        content: content
       };
       Layout.prototype.initialize.call(this, options);
       options.appController.on('statechange', _.bind(this.onStateChange, this));
