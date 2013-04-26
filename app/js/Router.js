@@ -54,7 +54,7 @@ define([
               name: 'Home item !'
             })
           ]),
-          itemTemplate: '<li><%=item.name%></li>'
+          itemTemplate: '<%=item.name%>'
         },
         depth: 0,
         title: 'Home Page !'
