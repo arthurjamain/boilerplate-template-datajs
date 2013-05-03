@@ -4,20 +4,43 @@ body{
   margin:0;
 }
 
-$headerHeight: 125px;
+$headerHeight: 10%;
+$sidebarWidth: 20%;
+
+
+#main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
 .titlebar{
   background: pink;
   height: $headerHeight;
+  text-align: center;
+  padding-top: 3%;
+  position: relative;
 }
+
 .sidebar{
   background: orange;
-  width:20%;
-  position: absolute;
   top: $headerHeight;
+  width: $sidebarWidth;
+  position: absolute;
   bottom: 0;
+  z-index: 10;
 }
 
 .content{
   background: yellow;
   margin: 0;
+  position: absolute;
+  top: $headerHeight;
+  left: $sidebarWidth;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
 }

@@ -2,6 +2,7 @@ define([
   'joshlib!utils/woodman',
   'joshlib!vendor/underscore',
   'joshlib!vendor/backbone',
+  'joshlib!ui/list',
   'joshlib!ui/layout',
 
   'views/TitlebarView',
@@ -11,8 +12,9 @@ define([
   woodman,
   _,
   Backbone,
+  List,
   Layout,
-  
+
   TitlebarView,
   SidebarView,
   ContentView
@@ -24,17 +26,20 @@ define([
     initialize: function(options) {
       logger.info('initialize');
       options = options || {};
+
       /**
-      * Create the children elements.
+      * Create the static children elements.
       * In this case, basically the whole interface.
       **/
       var titlebar = new TitlebarView({
         appController: options.appController,
         tagName: 'header'
       });
+
       var sidebar = new SidebarView({
         appController: options.appController
       });
+
       var content = new ContentView({
         appController: options.appController
       });
@@ -44,16 +49,17 @@ define([
         sidebar: sidebar,
         content: content
       };
+
       Layout.prototype.initialize.call(this, options);
+
+      /**
+      * We then listen to the controller's statechange event.
+      * Whenever the state changes, we propagate this (non standard) event.
+      **/
       options.appController.on('statechange', _.bind(this.onStateChange, this));
     },
     onStateChange: function(state) {
       logger.info('state change detected to', state.get('title'));
-      if(this.sidebarVisible) {
-        return this.hideSidebar(_.bind(function() {
-          this.propagate('statechange', state);
-        }, this));
-      }
       return this.propagate('statechange', state);
     },
     propagate: function(evt, state) {
