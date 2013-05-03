@@ -21,5 +21,8 @@
     "requirejs": "2.1.4",
     "jasmine-node": "1.0.28",
     "grunt-cli": "0.1.6"
+  },
+  "scripts" : {
+    "postinstall": "./postinstall.sh"
   }
 }
