@@ -16,7 +16,7 @@ Follow the steps below in order to setup a running dev environment from scratch.
 ### Clone the repo, select the `dev` branch, install npm dependencies
 Run the following commands:
 ```
-git clone git@github.com:joshfire/boilerplate-template-project.git
+git clone git@github.com:arthurjamain/boilerplate-template-datajs.git
 cd boilerplate-template-project
 git checkout dev
 npm install
